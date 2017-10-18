@@ -1,24 +1,13 @@
 <template>
 
   <el-row>
-    <el-col :span="4">
-      <div class="grid-content bg-purple"></div>
-    </el-col>
-    <el-col :span="8">
+    <el-col :span="6">
       <div class="grid-content bg-purple">
         <el-input placeholder="输入关键字进行过滤" v-model="filterText">
         </el-input>
-        <el-tree class="filter-tree" :data="data" :props="defaultProps" default-expand-all :filter-node-method="filterNode" check-strictly=true
+        <el-tree class="filter-tree expand-tree" :data="data" :props="defaultProps" default-expand-all :filter-node-method="filterNode" check-strictly=true
           highlight-current=true show-checkbox=false indent=64 accordion node-key="id" ref="tree">
         </el-tree>
-        <div class="buttons">
-          <el-button @click="getCheckedNodes">通过 node 获取</el-button>
-          <el-button @click="getCheckedKeys">通过 key 获取</el-button>
-          <el-button @click="setCheckedNodes">通过 node 设置</el-button>
-          <el-button @click="setCheckedKeys">通过 key 设置</el-button>
-          <el-button @click="resetChecked">清空</el-button>
-          <el-button @click="open">点击打开 Message Box</el-button>
-        </div>
       </div>
     </el-col>
     <el-col :span="4">
@@ -27,9 +16,6 @@
     </el-col>
     <el-col :span="4">
       <div class="grid-content bg-purple"></div>
-    </el-col>
-    <el-col :span="4">
-    <div class="grid-content bg-purple"></div>
     </el-col>
   </el-row>
 </template>
@@ -158,12 +144,15 @@
   .grid-content {
     border-radius: 4px;
     min-height: 36px;
-    height: 50vh
+    height: calc(80vh + 36px);
   }
 
   .row-bg {
     padding: 10px 0;
     background-color: #f9fafc;
   }
-
+ 
+  .expand-tree {
+    min-height: 80vh;
+  }
 </style>

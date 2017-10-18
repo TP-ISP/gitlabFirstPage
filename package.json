@@ -5,7 +5,7 @@
   "author": "zhangzju <zhangway19921221@163.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
+    "dev": "pm2 start build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
@@ -16,6 +16,7 @@
   "dependencies": {
     "element-ui": "^1.4.7",
     "normalize.css": "^7.0.0",
+    "pm2": "^2.7.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
