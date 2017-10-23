@@ -1,10 +1,10 @@
 <template>
 <div id="sidebar">
     <el-col :span="4">
-    <h5>分组</h5>
+    <h5>服务器快速导航</h5>
     <el-menu mode="vertical" default-active="1" class="el-menu-vertical-demo">
-      <el-menu-item-group title="分组一">
-        <el-menu-item index="1"><i class="el-icon-message"></i>导航一</el-menu-item>
+      <el-menu-item-group title="持续集成">
+        <el-menu-item index="1"><i class="el-icon-message"></i>Gitlab代码管理</el-menu-item>
         <el-menu-item index="2"><i class="el-icon-message"></i>导航二</el-menu-item>
       </el-menu-item-group>
       <el-menu-item-group title="分组二">
@@ -18,6 +18,9 @@
 
 <script>
     export default {
-    name: 'leftsidebar'
+    name: 'leftsidebar',
+    data (){
+      
+    }
   }
 </script>
